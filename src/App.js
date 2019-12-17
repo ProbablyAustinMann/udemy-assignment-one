@@ -13,7 +13,7 @@ class App extends Component {
   inputHandler = (event) => {
     this.setState({
       users: [
-        { name: event.target.value, comment: 'State Changed' }
+        { name: event.target.value, comment: event.target.value }
       ]
     });
   };
@@ -27,7 +27,6 @@ class App extends Component {
       <User
         name={this.state.users[0].name}
         comment={this.state.users[0].comment}
-        click={this.inputHandler.bind(this, 'Aus!!')}
         changed={this.inputHandler}>My Hobbies: Sleeping</User>
       </div>
     );
